@@ -1,0 +1,111 @@
+<!doctype html>
+<!--
+  HOME PAGE
+  HOW TO READ THIS FILE
+  - HTML comments (like this one) are notes only you can see.
+  - Look for "EDIT:" comments. They tell you what to change.
+  - Change the TEXT between tags. Leave class="..." names alone, because styles.css uses them.
+  - The header, nav and footer repeat on every page, so update them in all 4 files.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: This short description shows up in Google search results. -->
+  <meta name="description" content="A short sentence describing your business.">
+  <!-- EDIT: This is the text on the browser tab. Pattern: Page Name | Business Name -->
+  <title>North Star Bakery | Your Tagline</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== HEADER (same on every page) ===== -->
+  <header class="site-header">
+    <!-- EDIT: Swap the image file (src) for your logo. Keep the alt text describing it. -->
+    <a class="brand" href="index.html" aria-label="North Star Bakery home"><img src="./Bakery_c/bakery-logo_c.png" alt="North Star Bakery"></a>
+    <nav class="primary-nav" aria-label="Main navigation">
+      <!-- EDIT: Change the link text. Do NOT change the href file names unless you rename the files. -->
+      <a href="products.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- EDIT: This is the main call-to-action button (top right). -->
+    <a class="header-order" href="contact.html#request">Get in touch <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO: the first thing visitors see ===== -->
+    <section class="home-hero">
+      <div class="hero-copy">
+        <h1>Because Good Bread <br>Can't Be <em>Rushed.</em></h1>
+        <p class="hero-intro">We sell freshly baked goods daily sourced with organic local ingredients.</p>
+        <!-- EDIT: Link text. The arrow is decorative. -->
+        <a class="text-link" href="products.html">See what we offer <span aria-hidden="true">→</span></a>
+        <div class="hero-hours">
+          <span class="open-dot" aria-hidden="true"></span>
+          <!-- EDIT: Hours and address summary. -->
+          <p><strong>Open today, 9am–5pm</strong><br>123 Sample Street · Sample City</p>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <picture class="hero-picture">
+          <source media="(min-width: 720px)" srcset="./Bakery_c/bakery-feature-large_c.png">
+          <img src="./Bakery_c/bakery-feature-small_c.png" alt="Describe what the main image shows" fetchpriority="high">
+        </picture>
+        <span class="image-note">Freshly baked cookies</span>
+      </div>
+      <div class="hero-index" aria-hidden="true">01 / SAMPLE LABEL</div>
+    </section>
+
+    <!-- ===== GREEN INTRO BAND ===== -->
+    <section class="intro-band" aria-labelledby="known-for">
+      <div class="section-label">Made with care</div>
+      <div>
+        <h2 id="known-for">What we're known for</h2>
+        <p class="intro-band-copy">Sample text about your top strengths. Keep it to two short sentences so it stays easy to read.</p>
+      </div>
+      <a class="round-link" href="products.html" aria-label="Explore our services"><span aria-hidden="true">↗</span></a>
+    </section>
+
+    <!-- ===== FEATURE: one highlighted product, service or story ===== -->
+    <section class="week-feature" aria-labelledby="weekly-title">
+      <figure class="loaf-figure">
+        <img src="./Bakery_c/bakery-signature-loaf_c.png" alt="Baker holding a freshly baked loaf of bread" fetchpriority="high">
+        <figcaption><span>01</span> Featured item name · short description</figcaption>
+      </figure>
+      <div class="week-copy">
+        <p class="eyebrow">Featured this month</p>
+        <h2 id="weekly-title">Limited <br>time <br><em>Christmas</em><br>loaves.</h2>
+        <p>Order our limited time Christmas loaves while supplies last.</p>
+        <a class="text-link" href="contact.html#request">Ask about this <span aria-hidden="true">→</span></a>
+      </div>
+      <!-- EDIT: The round stamp. Keep it very short. -->
+      <div class="week-stamp" aria-hidden="true">Order <br>today</div>
+    </section>
+
+    <!-- ===== YELLOW VISIT STRIP ===== -->
+    <section class="visit-strip" aria-label="Visit us">
+      <div>
+        <p class="eyebrow">Come on in</p>
+        <h2>Stop by and <br>taste the difference.</h2>
+      </div>
+      <div class="visit-details">
+        <!-- EDIT: Address and hours. -->
+        <p><strong>123 Sample Street</strong><br>Sample City, ST 00000</p>
+        <p><strong>Monday–Friday</strong><br>9am–5pm · Weekends closed</p>
+      </div>
+      <a class="visit-arrow" href="contact.html" aria-label="Contact and location details"><span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">North Star <span>Bakery</span></a>
+    <p>Stop by and taste the difference.</p>
+    <nav aria-label="Footer navigation"><a href="products.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <small>© 2026 North Star Bakery</small>
+  </footer>
+</body>
+</html>
