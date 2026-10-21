@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse North Star Bakery's fresh bread, pastries and drinks, and build a pickup list to send us.">
+  <title>Services | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="North Star Bakery home"><img src="./Bakery_c/bakery-logo_c.png" alt="North Star Bakery"></a>
+    <nav class="primary-nav" aria-label="Main navigation">
+      <a href="products.html" aria-current="page">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-order" href="contact.html#request">Get in touch <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main" class="inner-page">
+    <section class="page-heading">
+      <h1>Freshly <em>baked.</em></h1>
+      <p>Check out our selection of fresh-baked goods.</p>
+    </section>
+
+    <section class="menu-feature" aria-label="Featured highlight">
+      <img src="./Bakery_c/bakery-feature-large_c.png" alt="Freshly baked cookies and pastries fill the bakery counter">
+      <div><span class="menu-feature-number">Always simple</span><p>Made with the freshest, locally-sourced ingredients.</p></div>
+    </section>
+
+    <section class="menu-list" aria-label="Bakery menu categories">
+      <article class="menu-category">
+        <div class="category-heading"><span>01</span><h2>Fresh Bread</h2><p class="price-range">$10–$30</p></div>
+        <p class="category-intro">Freshly baked daily with simple ingredients.</p>
+        <ul>
+          <li>
+            <span><strong>Sourdough</strong><small>Whole loaf of organic sourdough</small></span>
+            <div class="item-actions"><span>$10</span><button class="add-btn" type="button" data-id="sourdough" data-name="Sourdough" data-price="10" aria-pressed="false">+ Add</button></div>
+          </li>
+          <li>
+            <span><strong>Artisan sourdough</strong><small>Handcrafted sourdough loaf</small></span>
+            <div class="item-actions"><span>$25</span><button class="add-btn" type="button" data-id="artisan-sourdough" data-name="Artisan sourdough" data-price="25" aria-pressed="false">+ Add</button></div>
+          </li>
+          <li>
+            <span><strong>Whole grain sourdough</strong><small>Nutritious whole grain sourdough</small></span>
+            <div class="item-actions"><span>$30</span><button class="add-btn" type="button" data-id="whole-grain-sourdough" data-name="Whole grain sourdough" data-price="30" aria-pressed="false">+ Add</button></div>
+          </li>
+        </ul>
+      </article>
+
+      <article class="menu-category">
+        <div class="category-heading"><span>02</span><h2>Pastries</h2><p class="price-range">$5–$20</p></div>
+        <p class="category-intro">Freshly baked daily with simple ingredients.</p>
+        <ul>
+          <li>
+            <span><strong>Croissant</strong><small>Buttery, flaky pastry</small></span>
+            <div class="item-actions"><span>$5</span><button class="add-btn" type="button" data-id="croissant" data-name="Croissant" data-price="5" aria-pressed="false">+ Add</button></div>
+          </li>
+          <li>
+            <span><strong>Apple turnover</strong><small>Warm apple turnover with cinnamon</small></span>
+            <div class="item-actions"><span>$12</span><button class="add-btn" type="button" data-id="apple-turnover" data-name="Apple turnover" data-price="12" aria-pressed="false">+ Add</button></div>
+          </li>
+          <li>
+            <span><strong>Blueberry scone</strong><small>Flaky scone with fresh blueberries</small></span>
+            <div class="item-actions"><span>$20</span><button class="add-btn" type="button" data-id="blueberry-scone" data-name="Blueberry scone" data-price="20" aria-pressed="false">+ Add</button></div>
+          </li>
+        </ul>
+      </article>
+
+      <article class="menu-category">
+        <div class="category-heading"><span>03</span><h2>Drinks</h2><p class="price-range">$3–$10</p></div>
+        <p class="category-intro">Freshly brewed daily with simple ingredients.</p>
+        <ul>
+          <li>
+            <span><strong>Matcha Latte</strong><small>Green tea latte with matcha powder</small></span>
+            <div class="item-actions"><span>from $3</span><button class="add-btn" type="button" data-id="matcha-latte" data-name="Matcha Latte" data-price="3" aria-pressed="false">+ Add</button></div>
+          </li>
+          <li>
+            <span><strong>Cappuccino</strong><small>Rich espresso with steamed milk</small></span>
+            <div class="item-actions"><span>from $6</span><button class="add-btn" type="button" data-id="cappuccino" data-name="Cappuccino" data-price="6" aria-pressed="false">+ Add</button></div>
+          </li>
+          <li>
+            <span><strong>Espresso</strong><small>Strong black coffee</small></span>
+            <div class="item-actions"><span>from $10</span><button class="add-btn" type="button" data-id="espresso" data-name="Espresso" data-price="10" aria-pressed="false">+ Add</button></div>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <p class="menu-note">Prices may change with the season. For large orders, please give us 48 hours' notice.</p>
+    <!-- ===== PICKUP LIST: filled in by script.js and saved in the visitor's browser ===== -->
+    <section class="pickup-panel" id="pickup" aria-labelledby="pickup-title">
+      <p class="eyebrow">Saved on this device</p>
+      <h2 id="pickup-title">Your pickup list</h2>
+      <p id="pickup-empty" class="pickup-empty">Nothing here yet. Tap "+ Add" on any item to start your list.</p>
+      <ul id="pickup-items" class="pickup-items"></ul>
+      <p id="pickup-total" class="pickup-total" hidden></p>
+      <div class="pickup-actions" id="pickup-actions" hidden>
+        <a class="text-link" href="contact.html#request">Send this list to us <span aria-hidden="true">→</span></a>
+        <button class="clear-btn" id="pickup-clear" type="button">Clear list</button>
+      </div>
+      <p id="pickup-status" class="visually-hidden" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="callout-band"><p>Ready to get started?</p><a class="text-link" href="contact.html#request">Send us a request <span aria-hidden="true">→</span></a></section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">North Star <span>Bakery</span></a><p>Stop by and taste the difference.</p>
+    <nav aria-label="Footer navigation"><a href="products.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><small>© 2026 North Star Bakery</small>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
